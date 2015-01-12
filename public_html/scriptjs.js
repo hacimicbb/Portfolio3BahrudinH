@@ -6,7 +6,7 @@
 
 $("document").ready(function(){
     $('#oneButton').bind('click', keyisClicked);
-    $('#logo').bind('mouseover', mouseOverMe).bind('mouseout', mouseOutMe);
+    $('#logo').bind('click', mouseOverMe);
 });
 
     function keyisClicked(){
@@ -15,10 +15,12 @@ $("document").ready(function(){
     
     function mouseOverMe()
     {
-        ("#second").html("You put my cursor on my logo");
+        alert("You put my cursor on my logo");
     }
     
     function mouseOutMe()
     {
         ("#second").html("You put my cursor on my logo");
     }
+    
+    
