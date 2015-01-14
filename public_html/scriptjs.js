@@ -5,21 +5,24 @@
  */
 
 $("document").ready(function() {
+    
     $('#oneButton').bind('click', keyisClicked);
+    
     $('#logo').bind('mouseover', mouseOverMe);
+    
     $('p:last').css("background-color", "purple").css("color", "white");
-});
-
-$("document").ready(function() {
-
-$('deleteSpan').bind('click', deleteSpan)
- 
-     $('randPara').before('<span>Before Paragraph</span');
-     $('<span> Insert Before Paragraph</span>').insertBefore('randPara');
-     $('<span> Prepend to Paragraph</span>').prependTo('randPara');
-     $('<span> Append to Paragraph</span>')/appendTo('randPara');
-     $('#randPara').append('<span> Append Paragraph</span');
-     $('<span> Insert After Paragraph</span>').insertAfter('#randPara');
+    
+    $('#replaceWText').bind('click', replaceWText);
+    
+    $('#randPara').bind('click', addAPara);
+    
+    $('#removePara').bind('click', removeAPara);
+    
+    $('#show').css('visibility', 'hidden');
+    
+    $('#hide').bind('click', hideThePage);
+    
+    $('#show').bind('click', showThePage);
 });
 
 function keyisClicked() {
@@ -35,6 +38,30 @@ function mouseOverMe()
 function mouseOutMe()
 {
     $("#second").html("You took my cursor off my logo");
+}
+
+function hideThePage(){
+    $('#show').css('visibility', 'visible');
+    $('div').hide('slide', {}, 2500);
+    $('#show').show('fold', {}, 2500);
+}
+
+function showThePage(){
+    $('div').show('fold', {}, 2500);
+    $('#show').hide('puff', {}, 2500);
+}
+
+function removeAPara(){
+    $('#randPara p:last').remove();
+}
+
+function addAPara(){
+    $('#randPara').append('<p>ADDED</p>');
+
+}
+
+function replaceWText(){
+    $('#randPara').html('<h1>Dany loves Twilight</h1>')
 }
 
     
