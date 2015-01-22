@@ -55,4 +55,32 @@ and open the template in the editor.
    color: #fff;
    }
 
+   img {
+       width:240px;
+       height: auto;
+   }
+   
+   body {
+       background-color: lightgrey;
+   }
+   
+   div {
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+    padding: 30px;
+}
+/* This is the padding for each div and color.*/
+
+.container {
+    border-color: black;
+    font-size: 12px;
+}
+/* This is the color and size for everything inside of the container*/
+
+.row {
+    border-color: black;
+}
+/* This is the color to all rows*/
+   
 
